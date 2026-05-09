@@ -43,3 +43,10 @@ The project follows **Hexagonal Architecture** principles to maintain a clean se
    ```bash
    git clone [https://github.com/JonathanWG/code-coach-ai.git](https://github.com/JonathanWG/code-coach-ai.git)
    cd code-coach-ai
+
+2. **Configure Enviroment:**
+   ```bash
+   docker-compose up --build
+
+The API will be available at http://localhost:5000.
+   
