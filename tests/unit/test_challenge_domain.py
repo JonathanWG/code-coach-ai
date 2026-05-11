@@ -1,5 +1,6 @@
 import pytest
 from src.domain.entities import Challenge
+from uuid import UUID
 
 def test_challenge_creation_valid_data():
     """
@@ -40,3 +41,11 @@ def test_challenge_should_raise_error_on_empty_description():
             difficulty="Easy",
             tags=[]
         )
+
+def test_challenge_should_have_auto_generated_id():
+    """Garante que cada desafio receba um UUID único por padrão"""
+    challenge1 = Challenge(title="Test 1", description="Description 10 chars", difficulty="Easy")
+    challenge2 = Challenge(title="Test 2", description="Description 10 chars", difficulty="Easy")
+    
+    assert challenge1.id != challenge2.id
+    assert isinstance(challenge1.id, UUID)
