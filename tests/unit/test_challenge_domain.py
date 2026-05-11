@@ -4,8 +4,8 @@ from uuid import UUID
 
 def test_challenge_creation_valid_data():
     """
-    Testa se o objeto Challenge é criado corretamente com dados válidos.
-    """
+Tests whether the Challenge object is created correctly with valid data.    
+"""
     data = {
         "title": "Reverse a String",
         "description": "Write a function that reverses a string without using built-in reverse methods.",
@@ -20,7 +20,7 @@ def test_challenge_creation_valid_data():
 
 def test_challenge_invalid_difficulty():
     """
-    Testa se o Pydantic bloqueia uma dificuldade que não seja Easy, Medium ou Hard.
+    Tests whether Pydantic blocks a difficulty that is not Easy, Medium or Hard.
     """
     with pytest.raises(ValueError):
         Challenge(
@@ -32,7 +32,7 @@ def test_challenge_invalid_difficulty():
 
 def test_challenge_should_raise_error_on_empty_description():
     """
-    Garante que a descrição não seja uma string vazia ou apenas espaços.
+    Tests whether the Challenge object raises an error when the description is empty.
     """
     with pytest.raises(ValueError):
         Challenge(

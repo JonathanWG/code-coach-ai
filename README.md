@@ -1,6 +1,6 @@
 # CodeCoach AI 🤖
 
-An intelligent programming tutor built with **Python**, **Flask**, and **LangChain**. 
+An intelligent programming tutor built with **Python**, **Flask**, and **LangChain**, with Hexagonal Architecture.
 The system acts as a mentor, generating personalized coding challenges and providing architectural feedback on user submissions.
 
 ##  Project Goals
