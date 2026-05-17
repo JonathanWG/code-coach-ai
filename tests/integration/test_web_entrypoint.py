@@ -4,6 +4,7 @@ import pytest
 
 def test_generate_challenge_endpoint():
     with app.test_client() as client:
+        app.config['PROPAGATE_EXCEPTIONS'] = True
         response = client.post("/generate_challenge/", json={
             "theme": "array manipulation python",
             "difficulty": "Medium"
